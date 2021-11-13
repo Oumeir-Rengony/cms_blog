@@ -6,7 +6,7 @@ const graphqlApi = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
 export default async function submitComments(req, res) {
   const graphQLCLient = new GraphQLClient(graphqlApi, {
-    header: {
+    headers: {
       authorization: `Bearer ${process.env.GRAPHCMS_TOKEN}`,
     },
   });
